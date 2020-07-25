@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <link rel="stylesheet" type="text/css" href="stylems.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {
+            background-image: url(img/bg1.jpg);
+          }
+            
+            nav li a {
+                position: relative;
+                display: block;
+                text-decoration: none;
+                color: #ecf0f1;
+                text-transform: uppercase;
+                padding: 4px 0;
+                transition: 0.5s;
+            }
+            nav li a::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 2px;
+                top: 100%;
+                left: 0;
+                background: #ff7000;
+                transition: transform 0.5s;
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+            nav li a:hover::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+            .nav.navbar-nav.navbar-right li a {
+                color: rgb(83, 81, 81);
+            }
+            .nav.navbar-nav.navbar-right li a:hover {
+                color: rgb(0, 0, 0);
+                background:none;
+            }
+            .navbar-header{
+                color: rgb(192, 183, 183);
+            }
+            div.slide-right {
+                  width:100% ;
+                  overflow:hidden;
+                  margin-left: 40%;
+                }
+                div.slide-right p {
+                  animation: 3s slide-right;
+                }
+                
+                @keyframes slide-right {
+                  from {
+                    margin-left: -100%;
+                    width: 300%; 
+                  }
+                
+                }
+            .slide-right{
+                color: #16120f;
+                padding-top: 50px;
+                font-size: large;
+
+            }
+        </style>
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+            <div class="navbar-header wel" style="color: black;">
+                Website Name
+              </div>
+            <ul class="nav navbar-nav navbar-right nav1">
+                <li class="nav-item"><a href="homems.html">Home</a></li>
+                <li class="nav-item"><a href="aboutms.html">About</a></li>
+                <li class="nav-item"><a href="contactms.html">Contact Us</a></li>
+            </ul>
+          </nav>
+        <!-- <span id=con>Reach Us<span> -->
+            <br>
+            <br><br><br>
+            <span id=con2>We hope you had a great experience!</span>
+                <div class="slide-right">
+                <p>&#10004; We appreciate your valuable feedback.</p>
+                </div>
+                <div class="slide-right" >
+                    <p>&#10004; Below are our Social media handle.</p>
+                    </div>
+                <div class="slide-right">
+                        <p>&#10004; Feel free to contact us.</p>
+                    </div>
+                    <div class="slide-right">
+                        <p>&#10004; You are our #1 Priority.</p>
+                </div>
+                 <div class="sm">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <div class="footer">
+                    <p>Connecting founders and marketers with battle-hardened mentors</p>
+          <p>  © 2020 Growth Tonic LLC. All rights reserved. | Privacy Policy | Terms of Service</p>
+                  </div>
+    </body>
+</html>
