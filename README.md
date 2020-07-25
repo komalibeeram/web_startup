@@ -24,7 +24,9 @@ JavaScript is used for animations again.
 Click [here](https://komalibeeram.github.io/web_startup/homems.html) to view the home page of the website.
 
 
-Click [here](https://youtu.be/jF8htDbdFFA)
+Click [here](https://youtu.be/BGxXHB-flvY) to view our site on youtube.
+
+
 ## Contributors
 * [Komali Beeram](https://github.com/komalibeeram) 
 * [Satvika Reddy](https://github.com/SatvikaReddy)
