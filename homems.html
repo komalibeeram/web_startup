@@ -4,6 +4,8 @@
         <title> Home Page</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
         
         <style>
             body {
@@ -16,6 +18,7 @@
                 /* text-transform: uppercase; */
                 padding: 4px 0;
                 transition: 0.5s;
+                font-size: larger;
             }
             .nav li a::after {
                 position: absolute;
@@ -55,7 +58,7 @@
             .middle{
                 margin-top: 150px;
                 text-align: right;
-                padding-left: 500px;
+                padding-left: 200px;
             }
             .row:after{
                 content: "";
@@ -99,18 +102,15 @@
   outline:0;
   padding:10px 20px;
   font-size:18px;
-  background-color:orangered;
+  background-color:rgb(156, 198, 226);
   color:#fff;
-  //border:3px solid #4A6D8B;
   border:0;
   cursor:pointer;
   height:50px;
   width:200px;
   box-shadow:0 2px 0 0 rgba(0,0,0,0.3);
   transition:all 0.3s ease;
-  &:hover{
-    border-color:darken(#4A6D8B, 7%);
-  }
+
 }
 
 .btn-contract{
@@ -123,16 +123,7 @@
   font-size:9px;
   overflow:hidden;
   position:relative;
-  &:after{
-    content:"";
-    position:absolute;  
-    top:0;
-    left:0;
-    background-color:darken(#4A6D8B, 7%);
-    height:100%;
-    width:0%;
-    animation: expand100 2s normal backwards;
-  }
+
 }
 
 @keyframes expand100{
@@ -174,6 +165,9 @@
         <link rel="stylesheet" type="text/css" href="stylems.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     </head>
     <body>
 
@@ -185,7 +179,7 @@
             <ul class="nav navbar-nav navbar-right nav1">
                 <li class="nav-item "><a href="homems.html">Home</a></li>
                 <li class="nav-item "><a href="aboutms.html">About</a></li>
-                <li class="nav-item" style="margin-top: 10px;">Categories
+                <li class="nav-item" style="margin-top: 10px; text-align: center; font-size: larger;">Categories
                     <ul class="sub-menu" style="list-style-type: none;">
                         <li><a href="#Business" style="color: white;">Business</a></li>
                         <li><a href="#Skills" style="color: white;">Skills & Management</a> </li>
@@ -199,7 +193,7 @@
             </ul>
         </nav>
         <div class="row" > 
-        <div class="column left" style="margin-top: 150px;margin-left: 50px; width: 500px;">
+        <div class="column left" style="margin-top: 150px;margin-left: 200px; width: 500px;">
             <h1 class="slogan" style="font-size: 35px;font-family: Graphik,sans-serif;"><strong>Start a conversation.<br> Grow a business.</strong></h1>
             <p style="font-size: 18px;">Bounce ideas around and get personalised, actionable advice from vetted startup and marketing mentors. No gimmicks-just good old one-on-one conversations.</p>
             <br><br>
@@ -219,8 +213,6 @@
             <p><img src="img/img-2.png" alt=""></p><br>
             <p><img src="img/img-3.png" alt=""></p>
             <br>
-            
-            
             </div>
             
         </div>
@@ -253,13 +245,13 @@
         </div>
         <br><br>
         <main class="container">
-            <section class="card">
+            <section class="card" data-aos="fade-in">
               <img src="https://smartphotography.in/wp-content/uploads/2018/02/A_Appadurai_LR.jpg" alt="" style="width: 400px; height: 350px; align-content: center; margin-top: 100px;margin-left: 50px;margin-right: 0px;"/>
               <div id="Business">
                 <h3>Business</h3>
                 <p>
                     <h4>Surbinder Khurana</h4>
-                    Have successfully taken several enterprise analytics and mobile platforms to market. Most recently founded BankSmarts, an analytics platforms company, with clients including ICICI Bank and Citibank. Was earlier President of marketRx India, one of the largest analytics companies globally, and was acquired by Cognizant in 2007. Earlier, was managing investments for Infinity Ventures, which helped create companies like IndiaBulls, India Games and Avendus. Co-founder and CTO of EZPower systems, a Philadelphia based products company acquired in 1998 by Docucorp International (now a part of Oracle). Have been on the Advisory board of several emerging companies including Druva Software, the first born-in-India global product company; Power2SME, first 'Buying Club' for Indian SMEs; AuthBridge, a leader in background screening; and WTI, transforming the employee transportation industry.Member of the TiE Delhi Board, Chairman-Emeritus of NASSCOM-Gurgaon, member of NASSCOM Product Council, and was earlier Chair of TiE Entrepreneurship Nurturing Program and a NASSCOM-Emerge Mentor. Have a B.Tech from IIT Delhi.
+                    Have successfully taken several enterprise analytics and mobile platforms to market. Most recently founded BankSmarts, an analytics platforms company, with clients including ICICI Bank and Citibank. Was earlier President of marketRx India, one of the largest analytics companies globally, and was acquired by Cognizant in 2007. Earlier, was managing investments for Infinity Ventures, which helped create companies like IndiaBulls, India Games and Avendus. Co-founder and CTO of EZPower systems, a Philadelphia based products company acquired in 1998 by Docucorp International (now a part of Oracle). 
                 </p>
                 <a href="#" class="loginbtn">Connect</a>
               </div>
@@ -284,56 +276,16 @@
                 <p>
                     <h4>Tarun Adlakha</h4>
                     Serial entrepreneur with 2 decades of cross functional experience. Global citizen, Angel investor and Mentor.
+                    Tarun, a hardcore marketing professional brings more than 15 years of experience in the advertising and marketing domain. His career has seen and catered to a broad range of clients from MNCs, Indian corporate houses and public sector. He brings fresh thoughts, unique insights, freedom of expression and a bucket full of passion to the organization.
                 </p>
                 <a href="#" class="loginbtn">Contact Us</a>
               </div>
             </section>
         </main>
-        <div class="demo">
-            <div class="counter">
-                <div class="counter-content">
-                    <i class="fas fa-hourglass-half"></i>
-                        <span class="counter-value">20</span>
-                        <h3 class="title">
-                            Hours of mentoring received per entrepreneur on average
-                        </h3>
-                </div>
-            </div>
-            <div class="counter">
-                <div class="counter-content">
-                    <i class="fas fa-heartbeat"></i>
-                            <span class="counter-value">83</span>
-                            <h3 class="title">
-                                Survival rate for early-stage mentored entrepreneurs
-                            </h3>
-                </div>
-            </div>
-            <div class="counter">
-                <div class="counter-content">
-                                <i class="fas fa-heart"></i>
-                                <span class="counter-value">2</span>
-                                <h3 class="title">
-                                    Mentored entrepreneurs create twice as many new jobs as solo entrepreneurs
-                                </h3>
-                </div>
-            </div>
-               
-            <div class="counter">
-                <div class="counter-content">
-                                    <i class="glyphicon glyphicon-thumbs-up"></i>
-                                    <span class="counter-value">66</span>
-                                    <h3 class="title">
-                                        Percent of entrepreneurs do not have access to any other business development resources outside of tostartup
-                                    </h3>
-                </div>
-            </div>
-<script type="text/javascript">
-    $(".counter-value").counterUp({delay: 10});
-
-</script>
+        <br><br><br><br>
 
 </div>
-<div style="background-color: black; color: white; text-align: center;">
+<div style="background-color: rgb(247, 242, 242); color: rgb(15, 15, 15); text-align: center; padding: 20px;">
     <h2>Are you a college student willing to be an entrepreneur but have no clue regarding it?</h2>
     <p>Here is a chance for you to work under startup companies and learn the skill of entrepreneurship.</p>
     <form action="joinus.html">
@@ -353,7 +305,56 @@
     </form>
     
 </div>
-<div class="footer">
+<br><br><br><br>
+<div class="demo">
+    <div class="counter">
+        <div class="counter-content">
+            <i class="fas fa-hourglass-half"></i>
+                <span class="counter-value">20</span>
+                <h3 class="title">
+                    Hours of mentoring received per entrepreneur on average
+                </h3>
+        </div>
+    </div>
+    <div class="counter">
+        <div class="counter-content">
+            <i class="fas fa-heartbeat"></i>
+                    <span class="counter-value">83</span>
+                    <h3 class="title">
+                        Survival rate for early-stage mentored entrepreneurs
+                    </h3>
+        </div>
+    </div>
+    <div class="counter">
+        <div class="counter-content">
+                        <i class="fas fa-heart"></i>
+                        <span class="counter-value">2</span>
+                        <h3 class="title">
+                            Mentored entrepreneurs create twice as many new jobs as solo entrepreneurs
+                        </h3>
+        </div>
+    </div>
+       
+    <div class="counter">
+        <div class="counter-content">
+                            <i class="glyphicon glyphicon-thumbs-up"></i>
+                            <span class="counter-value">66</span>
+                            <h3 class="title">
+                                Percent of entrepreneurs do not have access to any other business development resources outside of tostartup
+                            </h3>
+        </div>
+    </div>
+</div>
+    
+<script type="text/javascript">
+$(".counter-value").counterUp({delay: 2});
+
+</script>
+<script>
+    AOS.init({
+});
+</script>
+<div class="footer" >
     <p>Connecting founders and marketers with battle-hardened mentors</p>
 <p>  © 2020 Growth Tonic LLC. All rights reserved. | Privacy Policy | Terms of Service</p>
   </div>
