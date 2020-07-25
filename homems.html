@@ -4,6 +4,7 @@
         <title> Home Page</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+        
         <style>
             body {
               background-image: url("img/bg1.jpg");
@@ -12,7 +13,7 @@
             nav li a {
                 position: relative;
                 display: block;
-                text-transform: uppercase;
+                /* text-transform: uppercase; */
                 padding: 4px 0;
                 transition: 0.5s;
             }
@@ -42,9 +43,133 @@
             .navbar-header{
                 color: rgb(192, 183, 183);
             }
+            .column{
+                float: left;
+                padding: 10px;
+            }
+            .right{
+                margin-top: 100px;
+                text-align: right;
+                
+            }
+            .middle{
+                margin-top: 150px;
+                text-align: right;
+                padding-left: 500px;
+            }
+            .row:after{
+                content: "";
+                display: table;
+                clear: both;
+            }
+            p img{
+                height: 200px;
+                width: 200px;
+            }
+            .image{
+                transition: transform .5s ease-in-out;
+            }
+            .image :hover img{
+                transform: scale(1.5) ;
+            }
+            .demo
+            {
+                display: flex;
+                /* position: absolute; */
+                /* margin-top: 35vw; */
+                width: 100%;
+                height: auto;
+                
+            }
+            .counter
+            {
+                flex:1;
+                background-color: aliceblue;
+                color: black;
+                opacity: 0.7;
+                text-align: center;
+            }
+            .counter-content
+            {
+                border-right: 0.0529vw dashed black;
+                border-left: .0529vw dashed black;
+                font-size: 3vw;
+            }
+            button{
+  outline:0;
+  padding:10px 20px;
+  font-size:18px;
+  background-color:orangered;
+  color:#fff;
+  //border:3px solid #4A6D8B;
+  border:0;
+  cursor:pointer;
+  height:50px;
+  width:200px;
+  box-shadow:0 2px 0 0 rgba(0,0,0,0.3);
+  transition:all 0.3s ease;
+  &:hover{
+    border-color:darken(#4A6D8B, 7%);
+  }
+}
 
-            
+.btn-contract{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  margin-left:75px;
+  margin-right:75px;
+  color:transparent;
+  font-size:9px;
+  overflow:hidden;
+  position:relative;
+  &:after{
+    content:"";
+    position:absolute;  
+    top:0;
+    left:0;
+    background-color:darken(#4A6D8B, 7%);
+    height:100%;
+    width:0%;
+    animation: expand100 2s normal backwards;
+  }
+}
 
+@keyframes expand100{
+  0%{
+    width:0%;
+  }
+  100%{
+    width:100%;
+  }
+}
+    .sub-menu{
+        transform: scale(0);
+        transform-origin: top center;
+        transition: all 300ms ease-in-out;
+    }
+    .sub-menu li{
+        font-size: 14px;
+        background-color: #ff7000;
+        padding: 8px 0;
+        color: white;
+        border-bottom: 1px solid;
+        transform: scale(0);
+        transform-origin: top center;
+        transition: all 300ms ease-in-out;
+    }
+    .sub-menu li:last-child{
+        border-bottom: 0;
+    }
+    /* .sub-menu li:hover{
+        background-color: aqua;
+    } */
+    li:hover .sub-menu li{
+        transform: scale(1);
+    }
+    li:hover .sub-menu{
+        transform: scale(1);
+    }
         </style>
         <link rel="stylesheet" type="text/css" href="stylems.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,18 +177,185 @@
     </head>
     <body>
 
-          <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
-            <div class="navbar-header wel">
-                Website Name
-              </div>
+        <nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+           <div class="navbar-header wel">
+            <i class="fas fa-building" style="color: orange;"></i> | ToStartUp
+                <!-- <img src="img/tostartup_logo_final.png" alt="tostartup" style="width: 392px; height: 83px;"> -->
+            </div>
             <ul class="nav navbar-nav navbar-right nav1">
                 <li class="nav-item "><a href="homems.html">Home</a></li>
-                <li class="nav-item"><a href="#">About</a></li>
-                <li class="nav-item"><a href="contactms.html">Contact Us</a></li>
+                <li class="nav-item "><a href="aboutms.html">About</a></li>
+                <li class="nav-item" style="margin-top: 10px;">Categories
+                    <ul class="sub-menu" style="list-style-type: none;">
+                        <li><a href="#Business" style="color: white;">Business</a></li>
+                        <li><a href="#Skills" style="color: white;">Skills & Management</a> </li>
+                        <li><a href="#Marketing" style="color: white;">Marketing</a> </li>
+                    </ul>
+                </li>
+                <li class="nav-item "><a href="contactms.html">Contact Us</a></li>
+                <li class="nav-item "><a href="loginms.html">Log In</a></li>
+                <li class="nav-item"><a href="registerms.html">Sign Up</a></li>
+                <!-- <li class="nav-item"><a href="#">Contact Us</a></li> -->
             </ul>
-          </nav>
-          
-          
+        </nav>
+        <div class="row" > 
+        <div class="column left" style="margin-top: 150px;margin-left: 50px; width: 500px;">
+            <h1 class="slogan" style="font-size: 35px;font-family: Graphik,sans-serif;"><strong>Start a conversation.<br> Grow a business.</strong></h1>
+            <p style="font-size: 18px;">Bounce ideas around and get personalised, actionable advice from vetted startup and marketing mentors. No gimmicks-just good old one-on-one conversations.</p>
+            <br><br>
 
+            <p style="font-size: 18px;"><strong>Talk to a mentor when...</strong><br><br>
+                <ul>
+                <li>You've hit a roadblock and you need to work through it.</li>
+                <li>You've got an idea but want validation before executing.</li>
+                <li>You have nobody to discuss your growth strategy with.</li>
+                <li>You are burned out and need to vent out your frustrations.</li>
+                <li>You have tried everything and still aren't getting results.</li>
+            </ul></p>
+        </div>
+        <div class="column middle" >
+            <div class="image">
+            <p><img src="img/img-1.png" alt=""></p><br>
+            <p><img src="img/img-2.png" alt=""></p><br>
+            <p><img src="img/img-3.png" alt=""></p>
+            <br>
+            
+            
+            </div>
+            
+        </div>
+        <div class="column right" >
+            <div class="image">
+            <p><img src="img/img-4.png" alt=""></p><br>
+            <p><img src="img/img-5.png" alt=""></p><br>
+            <p><img src="img/img-6.png" alt=""></p>
+        </div>
+        </div>
+        </div>
+        <br><br><br>
+        <div style="text-align: center; background-color: white;" >
+            <br><br>
+            <h2><strong>Stop wasting time reading advice on blog posts.</strong></h2>
+            <p>Book calls with our vetted mentors and entrepreneurs and get advice that is relevant to your situation.</p>
+            <br><br>
+            <h2><strong>Who could benefit from this?</strong></h2>
+            <p>Basically anyone that knows they don't know everything.</p>
+            <br><br>
+            <ul style="list-style-type: none;">
+                <li><i class="fas fa-arrow-circle-right">&nbsp </i>Startup founders with massive heart and vision but a bootstrapped budget for growth.</li>
+                <li><i class="fas fa-arrow-circle-right">&nbsp </i>Ambitious growth marketers that want to learn from others successes and mistakes.</li>
+                <li><i class="fas fa-arrow-circle-right">&nbsp </i>Traditional marketers that want to transition into a growth role but are overwhelmed.</li>
+                <li><i class="fas fa-arrow-circle-right">&nbsp </i>CMOs and VP's of Growth that are hungry for for their assumptions to be challenged.</li>
+                <li><i class="fas fa-arrow-circle-right">&nbsp </i>Product managers that want to approach product development from a growth-driven mindset.</li>
+                <li><i class="fas fa-arrow-circle-right">&nbsp </i>Performance marketers that want to learn from top 1% Google and Facebook Ads experts.</li>
+            </ul>
+            <br><br>
+        </div>
+        <br><br>
+        <main class="container">
+            <section class="card">
+              <img src="https://smartphotography.in/wp-content/uploads/2018/02/A_Appadurai_LR.jpg" alt="" style="width: 400px; height: 350px; align-content: center; margin-top: 100px;margin-left: 50px;margin-right: 0px;"/>
+              <div id="Business">
+                <h3>Business</h3>
+                <p>
+                    <h4>Surbinder Khurana</h4>
+                    Have successfully taken several enterprise analytics and mobile platforms to market. Most recently founded BankSmarts, an analytics platforms company, with clients including ICICI Bank and Citibank. Was earlier President of marketRx India, one of the largest analytics companies globally, and was acquired by Cognizant in 2007. Earlier, was managing investments for Infinity Ventures, which helped create companies like IndiaBulls, India Games and Avendus. Co-founder and CTO of EZPower systems, a Philadelphia based products company acquired in 1998 by Docucorp International (now a part of Oracle). Have been on the Advisory board of several emerging companies including Druva Software, the first born-in-India global product company; Power2SME, first 'Buying Club' for Indian SMEs; AuthBridge, a leader in background screening; and WTI, transforming the employee transportation industry.Member of the TiE Delhi Board, Chairman-Emeritus of NASSCOM-Gurgaon, member of NASSCOM Product Council, and was earlier Chair of TiE Entrepreneurship Nurturing Program and a NASSCOM-Emerge Mentor. Have a B.Tech from IIT Delhi.
+                </p>
+                <a href="#" class="loginbtn">Connect</a>
+              </div>
+            </section>
+      
+            <section class="card" data-aos="fade-in">
+              <img src="https://pbs.twimg.com/profile_images/487661932673900544/a4Jp430v.jpeg" alt="" style="width: 400px; height: 350px; align-content: center; margin-top: 100px;margin-left: 50px;margin-right: 0px;"/>
+              <div id="Skills">
+                <h3>Skills & Management</h3>
+                <p>
+                    <h4>Hemanth Kohli</h4>
+                    I am a serial tech entrepreneur. Currently, Chairman & Co-Founder, mPayGo - it prliferates digital payment acceptance by enabling Indian merchants to convert their smartphone into an mPOS without need for any extra hardware,dongle etc. mPayGo accepts Credit Card, Debit card, All major Wallets & UPi besides Netbanking.More details can be viewed at my linkedin profile :linkedin.com/in/hemant-kohli-309386
+                </p>
+                <a href="#" class="loginbtn">Connect</a>
+              </div>
+            </section>
+      
+            <section class="card" data-aos="fade-in">
+              <img src="https://smithsonianapa.org/now/wp-content/uploads/sites/15/2013/01/Author-Sanjit-Singh.jpg" alt="" style="width: 400px; height: 350px; align-content: center; margin-top: 100px;margin-left: 50px;margin-right: 0px;"/>
+              <div id="Marketing">
+                <h3>Marketing</h3>
+                <p>
+                    <h4>Tarun Adlakha</h4>
+                    Serial entrepreneur with 2 decades of cross functional experience. Global citizen, Angel investor and Mentor.
+                </p>
+                <a href="#" class="loginbtn">Contact Us</a>
+              </div>
+            </section>
+        </main>
+        <div class="demo">
+            <div class="counter">
+                <div class="counter-content">
+                    <i class="fas fa-hourglass-half"></i>
+                        <span class="counter-value">20</span>
+                        <h3 class="title">
+                            Hours of mentoring received per entrepreneur on average
+                        </h3>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="counter-content">
+                    <i class="fas fa-heartbeat"></i>
+                            <span class="counter-value">83</span>
+                            <h3 class="title">
+                                Survival rate for early-stage mentored entrepreneurs
+                            </h3>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="counter-content">
+                                <i class="fas fa-heart"></i>
+                                <span class="counter-value">2</span>
+                                <h3 class="title">
+                                    Mentored entrepreneurs create twice as many new jobs as solo entrepreneurs
+                                </h3>
+                </div>
+            </div>
+               
+            <div class="counter">
+                <div class="counter-content">
+                                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                                    <span class="counter-value">66</span>
+                                    <h3 class="title">
+                                        Percent of entrepreneurs do not have access to any other business development resources outside of tostartup
+                                    </h3>
+                </div>
+            </div>
+<script type="text/javascript">
+    $(".counter-value").counterUp({delay: 10});
+
+</script>
+
+</div>
+<div style="background-color: black; color: white; text-align: center;">
+    <h2>Are you a college student willing to be an entrepreneur but have no clue regarding it?</h2>
+    <p>Here is a chance for you to work under startup companies and learn the skill of entrepreneurship.</p>
+    <form action="joinus.html">
+        <button type="submit" style="border-radius: 50px;">Join Us</button>
+        <script>
+            $(".ajax-submit").click(function(){
+  
+  var $this = $(this);
+  
+  $this.addClass("btn-contract");
+  
+  setTimeout(function(){
+    $this.removeClass("btn-contract");
+  }, 2200);
+});
+        </script>
+    </form>
+    
+</div>
+<div class="footer">
+    <p>Connecting founders and marketers with battle-hardened mentors</p>
+<p>  © 2020 Growth Tonic LLC. All rights reserved. | Privacy Policy | Terms of Service</p>
+  </div>
     </body>
 </html>
