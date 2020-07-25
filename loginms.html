@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            body{
+                background: url(bg2.jpg) no-repeat center center fixed;
+                -webkit-background-size: cover;
+  
+            }
+            input{
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 4px;
+                border: 1px solid;
+                border-color: #c9c4c4;
+                box-shadow: 2px 2px #5c5a5a;
+                
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="stylems.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/2db298c112.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form class="login" method="POST" action="startup2.php">
+            <div class="loginh">
+                <h1 id="loginhead">Login</h1>
+            </div>
+            <div class="form">
+                    <i class="fas fa-envelope"></i><input size="33" type="text" name="email" placeholder="Email" required/>
+                    <br><br>
+                    <i class="fas fa-lock"></i><input size="33" type="password" name="pwd" placeholder="Password" required/>
+                    <br>
+                    <br><br>
+                    <br>
+                        <input class="loginbtn" type="submit" name="login_user" value="Login">
+                    
+                    <p>Don't have an account?<a href="registerms.html">Sign up here.</a></p>
+            </div>
+        </form>
+
+    </body>
+</html>
